@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
@@ -43,6 +44,14 @@ public class PostResource {
 		return ResponseEntity.ok().body(obj);
 	}
 	
+	@RequestMapping(path = "/filter", method = RequestMethod.GET)
+	public ResponseEntity<List<PostDTO>> findByTitle(@RequestParam String title){
+		List<PostDTO> list = service.findByTitle(title).stream().map(obj -> new PostDTO(obj))
+				.collect(Collectors.toList());
+		return ResponseEntity.ok().body(list);
+	}
+	
+	
 	@RequestMapping(method = RequestMethod.POST)
 	public ResponseEntity<Void> insert(@RequestBody @Valid PostNewDTO objDto){
 		Post obj = service.fromDTO(objDto);
@@ -65,7 +74,7 @@ public class PostResource {
 		return ResponseEntity.noContent().build();
 	}
 	
-	@RequestMapping(value="/like/{id}", method=RequestMethod.PUT)
+	@RequestMapping(value="/like/{id}", method=RequestMethod.POST)
 	public ResponseEntity<Void> updateLike(@PathVariable String id, 
 			@RequestHeader("Authorization") String token){
 		service.updateLike(id, token);

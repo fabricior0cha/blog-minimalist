@@ -18,7 +18,6 @@ public class PostNewDTO implements Serializable {
 	@NotBlank(message = "Content is mandatory")
 	private String content;
 	private Date date;
-	@NotBlank(message = "Author is mandatory")
 	private AuthorDTO author;
 	private List<String> likes = new ArrayList<>();
 	private List<String> tags = new ArrayList<>();

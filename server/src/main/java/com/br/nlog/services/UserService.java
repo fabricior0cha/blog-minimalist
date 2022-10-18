@@ -39,7 +39,7 @@ public class UserService {
 	
 	public User insert(User obj) {
 		User user = repository.findByEmail(obj.getEmail());
-		if(user == null) {
+		if(user != null) {
 			throw new EmailAlreadyExistsException("Email already exists");
 		}
 		return repository.insert(obj);

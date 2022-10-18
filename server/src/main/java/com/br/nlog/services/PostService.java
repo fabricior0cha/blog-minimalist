@@ -28,8 +28,13 @@ public class PostService {
 	private UserService userService;
 	
 	public List<Post> findAll(){
-		System.out.println(repository.findAll());
 		List<Post> list = repository.findAll();	
+		Collections.sort(list, Collections.reverseOrder());
+		return list;
+	}
+	
+	public List<Post> findByTitle(String title){
+		List<Post> list = repository.findByTitleContainingIgnoreCase(title);
 		Collections.sort(list, Collections.reverseOrder());
 		return list;
 	}
