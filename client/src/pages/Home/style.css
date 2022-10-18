@@ -1,0 +1,227 @@
+.container {
+    background-color: #272727;
+}
+
+
+.sidebar {
+    background-color: #272727;
+    height: 100vh;
+    
+    border-right: solid 5px #6EEB83;
+    position: fixed;
+}
+
+.sidebar-link {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.sidebar-link:hover img {
+    opacity: 50%;
+}
+
+.sidebar-link:hover .sidebar-text {
+    color: #6EEB83;
+}
+
+.sidebar-text {
+
+    color: #fff;
+    font-family: 'Lexend Deca';
+    font-weight: 400;
+    font-size: 16px;
+
+}
+
+.sidebar-img {
+    width: 50px;
+}
+
+
+
+.profile {
+    background-color: #6EEB83;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-name {
+    font-family: 'Lexend Deca';
+    font-weight: 400;
+    font-size: 32px;
+}
+
+.latest {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.latest-bar {
+    background-color: #6EEB83;
+    padding: 1px;
+    width: 30px;
+}
+
+.latest-text {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lexend Deca';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #fff;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    
+}
+
+.info-date {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lexend Deca';
+    font-weight: 600;
+    font-size: 30px;
+    color: #FFFFFF;
+    word-spacing: 200px;
+    text-align: center;
+    
+}
+
+.info-like{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-likes{
+    font-family: 'Lexend Deca';
+    font-weight: 400;
+    font-size: 20px;
+    color: #6EEB83;
+}
+
+.post-user {
+    font-family: 'Lexend Deca';
+    font-weight: 300;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    color: #FFFFFF;
+
+}
+
+.post-title {
+    padding: 0;
+    margin: 0;
+    font-family: 'DM Serif Display';
+    font-weight: 400;
+    font-size: 32px;
+    color: #6EEB83;
+    word-wrap:break-word; 
+    display:inline-block;
+    width: 100%;
+
+}
+
+.post-text {
+    font-family: 'Lexend Deca';
+    text-justify: distribute;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    word-spacing: -0.05em;
+    font-weight: 400;
+    font-size: 20px;
+    color: #FFFFFF;
+    word-wrap:break-word; 
+    display:inline-block;
+    width: 90%;
+}
+
+.post-link {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Lexend Deca';
+    font-weight: 400;
+    font-size: 20px;
+    color: #6EEB83;
+}
+
+.post-infos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.post-tag-home {
+    padding: 10px 15px;
+    border: solid 1px #6EEB83;
+    color: #6EEB83;
+    font-family: 'Lexend Deca';
+    border-radius: 100px;
+    font-weight: 500;
+    font-size: 13px;
+    
+}
+
+.post-tags-home{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+    .post-date{
+        font-family: 'Lexend Deca';
+        font-weight: 400;
+        font-size: 20px;
+        padding: 0;
+        margin: 0;
+        
+        color: #FFFFFF;
+    }
+    .post-like{
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+  }
+   
+
+
+
+  @media screen and (min-width: 601px) and (max-width: 1536px) {
+   .post-date{
+    display: none;
+   }
+   .post-like{
+    display: none;
+   }
+  }
+
+  
+
+  .mobile-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    border: solid 1px #6EEB83;
+    background-color: #272727;
+    bottom:0 ;
+    position:fixed;
+    width: 100%;
+  }

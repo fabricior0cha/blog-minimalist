@@ -1,0 +1,65 @@
+.container {
+    background-color: #272727;
+}
+
+
+.post-title {
+    font-family: 'DM Serif Display';
+    font-weight: 400;
+    font-size: 40px;
+    color: #6EEB83;
+    margin: 0;
+}
+
+.text {
+    font-family: 'Lexend Deca';
+    font-weight: 400;
+    font-size: 20px;
+    
+    color: #FFFFFF;
+    margin: 0;
+    display:inline-block;
+    white-space: pre-wrap;
+    margin-top: 50px;
+    text-justify: distribute;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    word-spacing: -0.05em;
+    word-wrap: break-word;
+    width: 100%;
+}
+
+.text:first-letter{
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.principal-info{
+    padding: 0;
+    margin: 0;
+    font-family: 'Lexend Deca';
+
+font-weight: 200;
+font-size: 20px;
+
+color: #A5A5A5;
+}
+
+.like-button{
+    background-color: #6EEB83;
+    border: none;
+    font-family: 'Lexend Deca';
+    font-weight: 700;
+    font-size: 18px;
+    
+    padding: 5px 15px;
+
+}
+
+
+.infos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
